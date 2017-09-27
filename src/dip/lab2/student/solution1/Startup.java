@@ -1,4 +1,4 @@
-package dip.lab2;
+package dip.lab2.student.solution1;
 
 // An useful import if you need it.
 import java.text.NumberFormat;
