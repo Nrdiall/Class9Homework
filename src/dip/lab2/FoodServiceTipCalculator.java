@@ -13,8 +13,8 @@ public class FoodServiceTipCalculator implements TipCalculator {
     private ServiceQuality quality;
     private double billAmt;
     public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {
-        setBillAmt(billAmt);
-        setQuality(q);
+        this.setBillAmt(billAmt);
+        this.setQuality(q);
     }
 
     @Override
