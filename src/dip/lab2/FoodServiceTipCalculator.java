@@ -12,7 +12,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
     private static final double MIN_BILL = 0.00;
     private ServiceQuality quality;
     private double billAmt;
-    public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {
+    public FoodServiceTipCalculator( double billAmt, ServiceQuality q) {
         this.setBillAmt(billAmt);
         this.setQuality(q);
     }

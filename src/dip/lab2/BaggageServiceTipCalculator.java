@@ -14,7 +14,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     private int bagCount;
     private ServiceQuality serviceQuality; 
 
-    public BaggageServiceTipCalculator(ServiceQuality q, int bags) {
+    public BaggageServiceTipCalculator(int bags, ServiceQuality q) {
         this.setServiceRating(q); // perform validation
         this.setBagCount(bags);
 

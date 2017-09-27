@@ -21,8 +21,8 @@ import javax.swing.JOptionPane;
 public class Startup {
  
     public static void main(String[] args) {
-        
-        
+        TipCalculator calc = new BaggageServiceTipCalculator(22, ServiceQuality.FAIR); 
+        System.out.println(calc.getTip());
     }
 
 }

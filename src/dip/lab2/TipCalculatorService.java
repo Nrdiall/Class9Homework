@@ -9,11 +9,11 @@ package dip.lab2;
  *
  * @author Naython
  */
-public class Calculator {
+public class TipCalculatorService {
     private TipCalculator tip;
 
-    public Calculator(TipCalculator tip) {
-        this.tip = tip;
+    public TipCalculatorService(TipCalculator t) {
+        tip = t;
     }
     public double getTip(TipCalculator calc){
         return calc.getTip();
