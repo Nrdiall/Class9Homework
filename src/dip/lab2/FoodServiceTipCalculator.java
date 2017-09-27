@@ -8,18 +8,48 @@ package dip.lab2;
  *
  * @author your name goes here
  */
-public class FoodServiceTipCalculator {
+public class FoodServiceTipCalculator implements TipCalculator {
     private static final double MIN_BILL = 0.00;
-    private static final String BILL_ENTRY_ERR =
-            "Error: bill must be greater than or equal to " + MIN_BILL;
-    private static double GOOD_RATE = 0.20;
-    private static double FAIR_RATE = 0.15;
-    private static double POOR_RATE = 0.10;
-
+    private ServiceQuality quality;
+    private double billAmt;
     public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {
-        
+        setBillAmt(billAmt);
+        setQuality(q);
     }
 
-   
+    @Override
+    public double getTip() {
+        double tipPercent = 0;
+        switch(quality){
+             case POOR:
+                tipPercent = .05;
+                break;
+            case FAIR:
+                tipPercent = .1;
+                break;
+            case GOOD:
+                tipPercent = .2;
+                break;
+        }
+        return billAmt * tipPercent;
+    }
 
+    public final double getBillAmt() {
+        return billAmt;
+    }
+
+    public void setBillAmt(double billAmt) {
+        if(billAmt<MIN_BILL){
+            throw new IllegalArgumentException("Bill amount can't be less than 0.");
+        }
+        this.billAmt = billAmt;
+    }
+
+    public final ServiceQuality getQuality() {
+        return quality;
+    }
+
+    public final void setQuality(ServiceQuality quality) {
+        this.quality = quality;
+    }
 }

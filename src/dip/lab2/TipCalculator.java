@@ -10,5 +10,5 @@ package dip.lab2;
  * @author Naython
  */
 public interface TipCalculator {
-    public abstract double getTip(ServiceQuality q, double t);
+    public abstract double getTip();
 }
