@@ -14,6 +14,7 @@ public class KeyboardReader implements Reader{
 
     @Override
     public String readMessage() {
+        System.out.println("Input Message: ");
         Scanner input = new Scanner(System.in);
         return input.nextLine();
     }

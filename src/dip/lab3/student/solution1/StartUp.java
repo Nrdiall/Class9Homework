@@ -9,11 +9,9 @@ package dip.lab3.student.solution1;
  *
  * @author Naython
  */
-public class FileReader implements Reader{
-
-    @Override
-    public String readMessage() {
-        
-    }
-    
+public class StartUp {
+    Reader r = new KeyboardReader();
+    Writer w = new GuiWriter();
+    InputOutputService ios = new InputOutputService( r, w );
+    ios.inAndOut();
 }

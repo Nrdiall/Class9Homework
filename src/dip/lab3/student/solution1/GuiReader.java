@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 package dip.lab3.student.solution1;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Naython
  */
-public class FileWriter implements Writer{
-
+public class GuiReader implements Reader{
     @Override
-    public void writeMessage(String m) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String readMessage() {
+        String response =  JOptionPane.showInputDialog(null, "Enter message: ");
+        return response;
     }
     
 }
